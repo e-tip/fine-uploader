@@ -8,6 +8,7 @@
   "maximumLineLength": false,
   "validateIndentation": 4,
   "validateQuoteMarks": "\"",
+  "requireDollarBeforejQueryAssignment": false,
   "requirePaddingNewLinesAfterBlocks": false,
   "requirePaddingNewLinesBeforeLineComments": false,
   "requireSpaceAfterComma": false,
