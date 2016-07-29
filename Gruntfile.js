@@ -38,7 +38,6 @@ module.exports = function(grunt) {
     grunt.initConfig({
         pkg: pkg,
         paths: paths,
-        clean: configs.clean(paths),
         compress: configs.compress(paths),
         concat: configs.concat(paths),
         copy: configs.copy(paths),
