@@ -491,6 +491,27 @@ qq.s3.util = qq.s3.util || (function() {
 
             // replace percent-encoded spaces with a "+"
             return percentEncoded.replace(/%20/g, "+");
-        }
+        },
+        /**
+         * Escapes url part as for AWS requirements
+         */
+         uriEscape: function(string) {
+            var output = encodeURIComponent(string);
+            output = output.replace(/[^A-Za-z0-9_.~\-%]+/g, escape);
+            output = output.replace(/[*]/g, function(ch) {
+                return '%' + ch.charCodeAt(0).toString(16).toUpperCase();
+            });
+            return output;
+         },
+        /**
+         * Escapes a path as for AWS requirement
+         */
+        uriEscapePath: function(path){
+            var parts = [];
+            qq.each(path.split('/'),function(idx,item){
+                parts.push(qq.s3.util.uriEscape(item))
+            });
+            return parts.join('/');
+        },
     };
 }());
