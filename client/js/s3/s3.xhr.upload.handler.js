@@ -458,8 +458,6 @@ qq.s3.XhrUploadHandler = function(spec, proxy) {
                 urlSafe: function(id) {
                     var encodedKey = handler.getThirdPartyFileId(id);
                     return qq.s3.util.uriEscapePath(encodedKey);
-                    // var encodedKey = encodeURIComponent(handler.getThirdPartyFileId(id));
-                    // return encodedKey.replace(/%2F/g, "/");
                 }
             },
 

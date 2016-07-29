@@ -149,7 +149,6 @@ qq.s3.RequestSigner = function(o) {
                     path = endOfUri.substr(0, queryParamIdx);
                 }
                 return "/" + path;
-                //return escape("/" + decodeURIComponent(path));
             },
 
             getEncodedHashedPayload: function(body) {
