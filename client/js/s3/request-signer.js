@@ -148,7 +148,7 @@ qq.s3.RequestSigner = function(o) {
                 if (queryParamIdx > 0) {
                     path = endOfUri.substr(0, queryParamIdx);
                 }
-                return "/"+path;
+                return "/" + path;
                 //return escape("/" + decodeURIComponent(path));
             },
 
