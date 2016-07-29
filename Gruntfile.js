@@ -43,7 +43,6 @@ module.exports = function(grunt) {
         copy: configs.copy(paths),
         cssmin: configs.cssmin(paths),
         jshint: configs.jshint(paths),
-        jscs: configs.jscs(paths),
         nodestatic: configs["static"](paths),
         aws_s3: configs.s3(paths.dist, paths.build, pkg.version),
         shell: configs.shell(paths),

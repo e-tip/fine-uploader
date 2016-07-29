@@ -54,13 +54,13 @@
     "grunt-contrib-jshint": "0.7.1",
     "grunt-contrib-uglify": "0.2.2",
     "grunt-contrib-watch": "0.4.4",
-    "grunt-jscs": "^0.7.1",
     "grunt-karma": "0.6.2",
     "grunt-nodestatic": "0.1.2",
     "grunt-open": "0.2.2",
     "grunt-shell": "0.3.1",
     "grunt-strip-code": "0.1.2",
     "grunt-version": "0.2.2",
+    "jscs": "3.0.7",
     "karma": "0.10.10",
     "karma-firefox-launcher": "0.1.2",
     "karma-ievms": "0.0.4",
@@ -81,10 +81,10 @@
   "scripts": {
     "build": "grunt package",
     "devbuild": "make clean; grunt dev",
-    "lint": "grunt jshint:tests; grunt jshint:source; grunt jscs:tests; grunt jscs:src",
+    "lint": "grunt jshint:tests; grunt jshint:source; make jscs",
     "setup-dev": "(cd test/dev/handlers; curl -sS https://getcomposer.org/installer | php; php composer.phar install)",
     "start-local-dev": "(. test/dev/handlers/s3keys.sh; php -S 0.0.0.0:9090 -t . -c test/dev/handlers/php.ini)",
-    "test": "if test \"$TRAVIS\" = \"true\" ; then make clean ; grunt travis ; else grunt test:firefox ; fi",
+    "test": "if test \"$TRAVIS\" = \"true\" ; then make clean ; make jscs ; grunt travis ; else grunt test:firefox ; fi",
     "update-dev": "(cd test/dev/handlers; php composer.phar update)"
   },
   "engines" : {

@@ -10,7 +10,6 @@ node_js:
 
 env:
   global:
-  - LOGS_DIR=/tmp/fineuploader-build/logs
   - DISPLAY=:99.0
   - secure: |-
       AZ/GEWzykeSzxh+4r14eKq2dMQnZyEvx99zFnTSp30Ke9QqJP3UQvMdwHzuV
