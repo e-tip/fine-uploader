@@ -494,6 +494,7 @@ qq.s3.util = qq.s3.util || (function() {
         },
         /**
          * Escapes url part as for AWS requirements
+         * AWS uriEscapePath function pulled from aws-sdk-js licensed under Apache 2.0 - http://github.com/aws/aws-sdk-js
          */
         uriEscape: function(string) {
             var output = encodeURIComponent(string);
@@ -505,6 +506,7 @@ qq.s3.util = qq.s3.util || (function() {
         },
         /**
          * Escapes a path as for AWS requirement
+         * AWS uriEscapePath function pulled from aws-sdk-js licensed under Apache 2.0 - http://github.com/aws/aws-sdk-js
          */
         uriEscapePath: function(path) {
             var parts = [];
